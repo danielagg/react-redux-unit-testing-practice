@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import checkPropTypes from "check-prop-types";
 import { findElementByTestAttribute } from "../../../utils/testHelper";
 import Header from "./Header";
 
