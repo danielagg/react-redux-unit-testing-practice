@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.scss";
+import { Provider } from "react-redux";
+import store from "./reduxStore";
 
+// Components
 import Header from "./components/header/Header";
 
 function App() {
@@ -15,9 +18,11 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <Header title={title} tempArr={tempArr} />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Header title={title} tempArr={tempArr} />
+      </div>
+    </Provider>
   );
 }
 
